@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Page sans Accessibilité</title>
+    <meta charset="UTF-8">
+    <title>Page avec Accessibilité</title>
 </head>
 <body>
+
 <h1>Titre de la Page</h1>
 <p>Ceci est un paragraphe de texte.</p>
 
-<!-- Formulaire sans étiquette pour les champs -->
+<!-- Formulaire avec des étiquettes associées -->
 <form>
-    <input id="name" type="text" placeholder="Entrez votre nom">
-    <input id="email" type="email" placeholder="Entrez votre adresse e-mail">
+    <label for="name">Nom :</label>
+    <input id="name" type="text" name="name" placeholder="Entrez votre nom" required>
+
+    <label for="email">Adresse e-mail :</label>
+    <input id="email" type="email" name="email" placeholder="Entrez votre adresse e-mail" required>
+
     <button type="submit">Envoyer</button>
 </form>
 
-<!-- Image sans attribut alt -->
-<img src="assets/image.png" height=250>
+<!-- Image avec un attribut alt descriptif -->
+<img src="assets/image.png" alt="Image illustrative de la page" height="250">
 
-<!-- Lien sans texte descriptif -->
-<a href="#">Cliquez ici</a>
+<!-- Lien avec un texte descriptif -->
+<a href="/contact" title="Aller vers la page de contact">Cliquez-ici</a>
+
 </body>
 </html>
+
+<!--
+Améliorations apportées pour l'accessibilité :
+
+1. Ajout de l'attribut lang="fr" dans la balise <html> pour indiquer la langue principale du document.
+2. Ajout de <meta charset="UTF-8"> pour garantir le bon encodage des caractères.
+3. Ajout d'éléments <label> associés aux champs du formulaire pour une navigation assistée (lecteurs d'écran, clavier).
+4. Ajout d'un attribut alt descriptif à l'image pour permettre aux lecteurs d'écran de comprendre son contenu.
+5. Remplacement du lien peu explicite ("Cliquez ici") par un texte de lien descriptif et significatif.
+-->
